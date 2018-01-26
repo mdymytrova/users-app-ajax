@@ -1,0 +1,16 @@
+<% include partials/header %>
+
+<% const currentUser = idObject.users.filter(function(user) {return user.id === idObject.id})[0] %>
+
+<h1>Edit <%= currentUser.firstName %> <%= currentUser.lastName %></h1>
+
+<form action="/users/<%= currentUser.id %>?_method=PUT" method="post" class="form" data-id="<%= currentUser.id %>">
+  <input id="firstName" type="text" name="firstName" value="<%= currentUser.firstName %>" class="input-text">
+  <input id="lastName" type="text" name="lastName" value="<%= currentUser.lastName %>" class="input-text">
+  <input id="email" type="email" name="email" value="<%= currentUser.email %>" class="input-text">
+  <input id="age" type="text" name="age" value="<%= currentUser.age %>" class="input-text">
+  <button id="edit-user" type="submit" class="button button-submit">Update</button>
+</form>
+
+
+<% include partials/footer  %>

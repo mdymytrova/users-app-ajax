@@ -1,0 +1,18 @@
+<% include partials/header %>
+
+<h1>Users page</h1>
+
+<form action="/users" method="post" class="form" id="new-user-form">
+  <input id="firstName" type="text" name="firstName" placeholder="First Name" required class="input-text">
+  <input id="lastName" type="text" name="lastName" placeholder="Last Name" required class="input-text">
+  <input id="email" type="email" name="email" placeholder="Email" required class="input-text">
+  <input id="age" type="text" name="age" placeholder="Age" required class="input-text">
+  <button type="submit" class="button button-submit" id="submit-user">Add User</button>
+</form>
+
+
+<section class="userlist-container" id="userlist-container">
+</section>
+
+
+<% include partials/footer  %>

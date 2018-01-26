@@ -1,0 +1,144 @@
+body {
+    font-family: Verdana;
+    color: #292F36;
+    background-color: #4ECDC4;
+    padding: 20px 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #292F36;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #F7FFF7;
+    padding-bottom: 20px;
+}
+
+.userlist-container {
+    padding-top: 40px;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user-info {
+    padding: 20px;
+    background-color: #F7FFF7;
+    border-radius: 5px;
+}
+
+.form {
+    width: 40%;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.input-text {
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #FFC4C4;
+    display: block;
+    font-size: 1rem;
+}
+
+.input-text:focus {
+    background-color: #FFC4C4;
+    outline: none;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    background-color: #FF6B6B;
+    color: #F7FFF7;
+    font-size: 1rem;
+}
+
+.button:focus {
+    outline-color: #FF6B6B;
+}
+
+.button-submit {
+    padding: 20px 10px;
+}
+
+.button-edit {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .userlist-container {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+    
+    .form {
+      width: 100%;
+      min-width: 250px;
+    }
+}
+
+.modal-container {
+  z-index: 1000;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.modal-overlay {
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.modal-body {
+  background-color: #fff;
+  width: 480px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -100px;
+  border-radius: 10px;
+  box-shadow: 0 0 50px #000;
+  padding: 40px 0;
+}
+
+.show {
+  display: block;
+}
+
+.close-modal {
+  margin-left: 20px;
+}
+
+
+
